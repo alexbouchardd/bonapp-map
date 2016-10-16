@@ -1,0 +1,35 @@
+{"types": [
+  {
+    "type": "full",
+    "en": {
+      "description": "",
+      "rules": ""
+    },
+    "fr": {
+      "description": "",
+      "rules": ""
+    }
+  },
+  {
+    "type": "warm",
+    "en": {
+      "description": "",
+      "rules": ""
+    },
+    "fr": {
+      "description": "",
+      "rules": ""
+    }
+  },
+  {
+    "type": "cold",
+    "en": {
+      "description": "",
+      "rules": ""
+    },
+    "fr": {
+      "description": "",
+      "rules": ""
+    }
+  }
+]}
