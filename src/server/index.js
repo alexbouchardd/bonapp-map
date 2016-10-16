@@ -1,17 +1,18 @@
-var fs = require('fs');
-var path = require('path');
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
+import fs from 'fs';
+import path from 'path';
+import express from 'express';
+import bodyParser from 'body-parser';
+
+const app = express();
 
 app.set('port', (process.env.PORT || 3000));
 
-app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(process.cwd(), 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Additional middleware which will set headers that we need on each request.
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
     // Set permissive CORS header - this allows this server to be used only as
     // an API server in conjunction with something like webpack-dev-server.
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -23,6 +24,6 @@ app.use(function(req, res, next) {
 
 require('./routes')(app);
 
-app.listen(app.get('port'), function() {
+app.listen(app.get('port'), () => {
   console.log('Server started: http://localhost:' + app.get('port') + '/');
 });
