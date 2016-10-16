@@ -11,18 +11,7 @@
     }
   },
   {
-    "type": "warm",
-    "en": {
-      "description": "",
-      "rules": ""
-    },
-    "fr": {
-      "description": "",
-      "rules": ""
-    }
-  },
-  {
-    "type": "cold",
+    "type": "partial",
     "en": {
       "description": "",
       "rules": ""
