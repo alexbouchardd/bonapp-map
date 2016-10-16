@@ -1,0 +1,19 @@
+{
+  "name": "bonapp",
+  "version": "1.0.0",
+  "description": "Bonapp network platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexbouchardd/bonapp.git"
+  },
+  "author": "Bonapp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexbouchardd/bonapp/issues"
+  },
+  "homepage": "https://github.com/alexbouchardd/bonapp#readme"
+}
