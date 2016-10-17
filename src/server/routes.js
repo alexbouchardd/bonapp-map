@@ -7,6 +7,6 @@ module.exports = function(app){
       droppoint.place = places[droppoint.place_id];
       return droppoint;
     });
-    res.send(full_droppoints).end(200);
+    res.send(full_droppoints);
   });
 }
