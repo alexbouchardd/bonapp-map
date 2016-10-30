@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
+import Map from './map';
 
-import Header from './header';
-
-export default function Home() {
-  return <div><Header/></div>;
+export default class Home extends Component {
+  render() {
+    return (
+      <Map/>
+    );
+  }
 }

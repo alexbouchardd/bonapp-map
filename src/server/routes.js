@@ -16,7 +16,7 @@ module.exports = function(app){
   });
 
   app.get('/', (req, res) => {
-    const ret = ReactDOMServer.renderToString(<Home/>);
-    res.send(ret);
+    const markup = ReactDOMServer.renderToString(<Home/>);
+    return res.render('index', { markup });
   });
 };
