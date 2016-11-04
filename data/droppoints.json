@@ -11,12 +11,14 @@
         "en": {
             "name": "Café le 5 ième",
             "description": "No waste coworking coffee",
-            "address": "290, De la Montagne Street, Montreal, Quebec, H3C 2B1"
+            "address": "290, De la Montagne Street, Montreal, Quebec, H3C 2B1",
+            "address_short": "290, De la Montagne Street"
         },
         "fr": {
             "name": "Café le 5 ième",
             "description": "Café coworking zéro déchet.",
-            "address": "290 Rue de la Montagne, Montréal, Québec H3C 2B1"
+            "address": "290 Rue de la Montagne, Montréal, Québec H3C 2B1",
+            "address_short": "290 Rue de la Montagne"
         }
     },
     {
@@ -31,12 +33,14 @@
         "en": {
             "name": "LOCO",
             "description": "Zero waste and eco friendly grocery store.",
-            "address": "422 Jarry E Street, Montreal, Quebec, H2P 1V3"
+            "address": "422 Jarry E Street, Montreal, Quebec, H2P 1V3",
+            "address_short": "422 Jarry E Street"
         },
         "fr": {
             "name": "LOCO",
             "description": "Épicerie écologique zéro déchet.",
-            "address": "422 Rue Jarry E, Montréal, QC H2P 1V3"
+            "address": "422 Rue Jarry E, Montréal, QC H2P 1V3",
+            "address_short": "422 Rue Jarry E"
         }
     },
     {
@@ -50,12 +54,14 @@
         "en": {
             "name": "L'esplanade",
             "description": "L’esplanade is the first coworking space and accelerator dedicated to social entrepreneurship and innovation in Quebec.",
-            "address": "6750, l’Esplanade avenue (Office 102), Montreal, Quebec,  H2V 4M1"
+            "address": "6750, l’Esplanade avenue (Office 102), Montreal, Quebec,  H2V 4M1",
+            "address_short": "6750, l’Esplanade avenue (Office 102)"
         },
         "fr": {
             "name": "L'esplanade",
             "description": "L’esplanade est le premier espace collaboratif et accélérateur dédié à l’entrepreneuriat et à l’innovation sociale au Québec.",
-            "address": "6750, avenue de l'Esplanade (Bureau 102) Montréal, Québec, H2V 4M1"
+            "address": "6750, avenue de l'Esplanade (Bureau 102) Montréal, Québec, H2V 4M1",
+            "address_short": "6750, avenue de l'Esplanade (Bureau 102)"
         }
     },
     {
@@ -69,12 +75,14 @@
         "en": {
             "name": "Concordia: The Hive Café",
             "description": "Student-run Hive Cafe Solidarity Cooperative",
-            "address": "1455 De Maisonneuve Blvd. W. H-290, Montreal, Quebec, Canada, H3G 1M8"
+            "address": "1455 De Maisonneuve Blvd. W. H-290, Montreal, Quebec, Canada, H3G 1M8",
+            "address_short": "1455 De Maisonneuve Blvd. W. H-290"
         },
         "fr": {
             "name": "Concordia: The Hive Café",
             "description": "Hive Café est une coopérative de solidarité gérée par des étudiants.",
-            "address": "1455 De Maisonneuve Blvd. W. H-290, Montreal, Quebec, Canada, H3G 1M8"
+            "address": "1455 De Maisonneuve Blvd. W. H-290, Montreal, Quebec, Canada, H3G 1M8",
+            "address_short": "1455 De Maisonneuve Blvd. W. H-290"
         }
     }
 ]

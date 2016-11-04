@@ -1,10 +1,14 @@
 import React, {PropTypes, Component} from 'react';
-import shouldPureComponentUpdate from 'react-pure-render/function';
 
 import GoogleMap from 'google-map-react';
+import Marker from './marker';
 
 export default class Map extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    const center = this.props.selected ? [this.props.selected.place.lat, this.props.selected.place.long] : [45.5017, -73.5673];
     return (
       <div id='mapContainer'>
          <GoogleMap
@@ -12,10 +16,17 @@ export default class Map extends Component {
             key: 'AIzaSyCPMq-OZb3CNvLyibyJAyWnikjyFQWvN8w',
             language: 'en'
           }}
-          defaultCenter={{lat: 59.938043, lng: 30.337157}}
-          defaultZoom={9}>
+          center={center}
+          defaultZoom={13}>
+          {this.props.droppoints.map((droppoint, index) =>
+            <Marker key={index} lat={droppoint.place.lat} lng={droppoint.place.long} text={index} onClick={() => this._handleMarkerClicked(droppoint)}/>
+          )}
         </GoogleMap>
       </div>
     );
+  }
+
+  _handleMarkerClicked(droppoint) {
+    this.props.onItemClick(droppoint);
   }
 }

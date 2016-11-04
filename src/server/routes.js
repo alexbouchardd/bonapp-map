@@ -16,7 +16,14 @@ module.exports = function(app){
   });
 
   app.get('/', (req, res) => {
-    const markup = ReactDOMServer.renderToString(<Home/>);
-    return res.render('index', { markup });
+    var full_droppoints = droppoints.map(droppoint => {
+      droppoint.place = places[droppoint.place_id];
+      return droppoint;
+    });
+    const props = {
+      droppoints: full_droppoints
+    }
+    const markup = ReactDOMServer.renderToString(<Home droppoints={props.droppoints}/>);
+    return res.render('index', { props: props, html: markup });
   });
 };
