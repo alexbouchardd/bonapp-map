@@ -8,7 +8,7 @@ import Home from '../components/home';
 
 module.exports = function(app){
   app.get('/api/droppoints', function(req, res) {
-    var full_droppoints = droppoints.map(droppoint => {
+    const full_droppoints = droppoints.map(droppoint => {
       droppoint.place = places[droppoint.place_id];
       return droppoint;
     });
@@ -16,7 +16,7 @@ module.exports = function(app){
   });
 
   app.get('/', (req, res) => {
-    var full_droppoints = droppoints.map(droppoint => {
+    const full_droppoints = droppoints.map(droppoint => {
       droppoint.place = places[droppoint.place_id];
       return droppoint;
     });

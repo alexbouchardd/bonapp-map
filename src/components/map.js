@@ -17,9 +17,14 @@ export default class Map extends Component {
             language: 'en'
           }}
           center={center}
-          defaultZoom={13}>
+          defaultZoom={12}>
           {this.props.droppoints.map((droppoint, index) =>
-            <Marker key={index} lat={droppoint.place.lat} lng={droppoint.place.long} text={index} onClick={() => this._handleMarkerClicked(droppoint)}/>
+            <Marker
+              key={index}
+              selected={this.props.selected ? this.props.selected.id === droppoint.id : null}
+              lat={droppoint.place.lat}
+              lng={droppoint.place.long}
+              onClick={() => this._handleMarkerClicked(droppoint)}/>
           )}
         </GoogleMap>
       </div>

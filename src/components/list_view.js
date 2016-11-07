@@ -6,10 +6,17 @@ export default class Home extends Component {
   }
   render() {
     return (
-      <div className="listView z-2">
-        {this.props.droppoints.map((droppoint, index) =>
-          this._renderItem(droppoint)
-        )}
+      <div className="listContainer">
+        <div className="listInfo">
+          <h1>Droppoints</h1>
+          <a>How does it work?</a>
+        </div>
+        <div className="listView">
+          {this.props.droppoints.map((droppoint, index) =>
+            this._renderItem(droppoint)
+          )}
+        </div>
+        {this._renderFooter()}
       </div>
     );
   }
@@ -23,5 +30,13 @@ export default class Home extends Component {
         <p>{droppoint.en.description}</p>
       </div>
     );
+  }
+
+  _renderFooter() {
+    return(
+      <div className="footer">
+        Test
+      </div>
+    )
   }
 }

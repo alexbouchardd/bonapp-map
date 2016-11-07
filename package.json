@@ -1,7 +1,7 @@
 {
   "name": "bonapp",
   "version": "1.0.0",
-  "description": "Bonapjp network platform",
+  "description": "Bonapp network platform",
   "main": "app.js",
   "scripts": {
     "start": "node ./src/server",

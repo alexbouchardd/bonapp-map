@@ -13,7 +13,14 @@ export default class Marker extends Component {
     return (
        <div className="marker" onClick={this.props.onClick}>
          {svg}
+         {this._renderSelected()}
        </div>
     );
+  }
+
+  _renderSelected() {
+    if(this.props.selected){
+      return (<div className="markerSelected"></div>);
+    }
   }
 }
