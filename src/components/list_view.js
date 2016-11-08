@@ -1,5 +1,26 @@
 import React, {PropTypes, Component} from 'react';
 
+import Distance from "../lib/distance";
+
+const footerLinks = [
+  {
+    translation_key: "!nav.network",
+    url: ""
+  },{
+    translation_key: "!nav.about",
+    url: ""
+  },{
+    translation_key: "!nav.contact",
+    url: ""
+  },{
+    translation_key: "!nav.receipes",
+    url: ""
+  },{
+    translation_key: "!nav.blog",
+    url: ""
+  }
+]
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -9,11 +30,15 @@ export default class Home extends Component {
       <div className="listContainer">
         <div className="listInfo">
           <h1>Droppoints</h1>
-          <a>How does it work?</a>
+          <a>Deposit or take food at these locations</a>
         </div>
         <div className="listView">
-          {this.props.droppoints.map((droppoint, index) =>
-            this._renderItem(droppoint)
+          {this.props.droppoints.map((droppoint, index) => {
+            // if(this.props.user_position){
+            //   console.log(Distance(droppoint.place.lat, droppoint.place.long, this.props.user_position.lat, this.props.user_position.lng, "K"));
+            // }
+            return this._renderItem(droppoint);
+          }
           )}
         </div>
         {this._renderFooter()}
@@ -25,7 +50,7 @@ export default class Home extends Component {
     const selectedClass = this.props.selected && (this.props.selected.id === droppoint.id) ? 'selectedItem ' : "";
     return(
       <div key={droppoint.id} className={selectedClass + "listItem"} onClick={() => this.props.onItemClick(droppoint)}>
-        <h1>{droppoint.en.name}</h1>
+        <h2>{droppoint.en.name}</h2>
         <p className="details">{droppoint.en.address_short}</p>
         <p>{droppoint.en.description}</p>
       </div>
@@ -35,7 +60,11 @@ export default class Home extends Component {
   _renderFooter() {
     return(
       <div className="footer">
-        Test
+        {footerLinks.map((link, index) => {
+          return (
+            <a href={link.url} key={index}>{link.translation_key}</a>
+          );
+        })}
       </div>
     )
   }

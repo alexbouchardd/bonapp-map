@@ -1,22 +1,22 @@
 {
     "5ieme": {
         "lat": 45.491970,
-        "long": -73.561802,
+        "lng": -73.561802,
         "google_places_id": null
     },
     "loco": {
         "lat": 45.542986,
-        "long": -73.628787,
+        "lng": -73.628787,
         "google_places_id": "ChIJAUULsxgZyUwRLoQEI5_yqCA"
     },
     "esplanade": {
         "lat": 45.529640,
-        "long": -73.616285,
+        "lng": -73.616285,
         "google_places_id": "ChIJiz33J3MZyUwRm2EZ0pSb3A4"
     },
     "hive": {
         "lat": 45.497273,
-        "long": -73.579024,
+        "lng": -73.579024,
         "google_places_id": "ChIJJwyxh2oayUwRceF1rWtAQOs"
     }
 }

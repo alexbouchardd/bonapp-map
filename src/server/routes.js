@@ -20,8 +20,10 @@ module.exports = function(app){
       droppoint.place = places[droppoint.place_id];
       return droppoint;
     });
+    const accept_lang = req.acceptsLanguages(["fr", "en"]);
+    const lang = accept_lang ? accept_lang : "fr";
     const props = {
-      droppoints: full_droppoints
+      droppoints: full_droppoints,
     }
     const markup = ReactDOMServer.renderToString(<Home droppoints={props.droppoints}/>);
     return res.render('index', { props: props, html: markup });
