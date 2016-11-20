@@ -21,16 +21,18 @@ const footerLinks = [
   }
 ]
 
-export default class Home extends Component {
+export default class ListView extends Component {
+
   constructor(props) {
     super(props);
   }
+
   render() {
     return (
       <div className="listContainer">
         <div className="listInfo">
-          <h1>Droppoints</h1>
-          <a>Deposit or take food at these locations</a>
+          <h1>{this.context.translator.t("!list.title")}</h1>
+          <a>{this.context.translator.t("!list.description")}</a>
         </div>
         <div className="listView">
           {this.props.droppoints.map((droppoint, index) => {
@@ -50,9 +52,9 @@ export default class Home extends Component {
     const selectedClass = this.props.selected && (this.props.selected.id === droppoint.id) ? 'selectedItem ' : "";
     return(
       <div key={droppoint.id} className={selectedClass + "listItem"} onClick={() => this.props.onItemClick(droppoint)}>
-        <h2>{droppoint.en.name}</h2>
-        <p className="details">{droppoint.en.address_short}</p>
-        <p>{droppoint.en.description}</p>
+        <a href={droppoint.link} target="_blank">{droppoint[this.context.translator.lang].name}</a>
+        <p className="details">{droppoint[this.context.translator.lang].address_short}</p>
+        <p>{droppoint[this.context.translator.lang].description}</p>
       </div>
     );
   }
@@ -62,10 +64,14 @@ export default class Home extends Component {
       <div className="footer">
         {footerLinks.map((link, index) => {
           return (
-            <a href={link.url} key={index}>{link.translation_key}</a>
+            <a href={link.url} key={index}>{this.context.translator.t(link.translation_key)}</a>
           );
         })}
       </div>
     )
   }
+}
+
+ListView.contextTypes = {
+  translator: PropTypes.object.isRequired
 }

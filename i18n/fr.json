@@ -1,10 +1,10 @@
 {
   "!nav.about" : "À propos",
   "!nav.network" : "Réseau",
-  "!nav.contact" : "Contactez-nous",
+  "!nav.contact" : "Contact",
   "!nav.blog" : "Blogue",
   "!nav.receipes" : "Recettes",
-  "!list.title": "Point d'échance",
-  "!list.description": "Déposer et prenner de la nourriture à c'est endroit",
+  "!list.title": "Point d'échange",
+  "!list.description": "Déposez ou prenez de la nourriture à ces endroits",
   "!list.how": "Comment ça marche?"
 }

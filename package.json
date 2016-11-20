@@ -27,6 +27,7 @@
     "babel-preset-stage-2": "^6.17.0",
     "babelify": "^7.3.0",
     "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
     "express": "^4.14.0",
     "google-maps-react": "^1.0.19",
     "react": "^15.3.2",

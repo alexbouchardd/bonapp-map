@@ -12,6 +12,10 @@ export default class Home extends Component {
     };
   }
 
+  getChildContext() {
+    return {translator: this.props.translator};
+  }
+
   componentDidMount() {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(position => {
@@ -49,4 +53,13 @@ export default class Home extends Component {
   _handleItemClick(droppoint) {
     this.setState({selected: droppoint});
   }
+}
+
+Home.propTypes = {
+  droppoints: PropTypes.array.isRequired,
+  translator: PropTypes.object.isRequired
+}
+
+Home.childContextTypes = {
+  translator: PropTypes.object.isRequired
 }

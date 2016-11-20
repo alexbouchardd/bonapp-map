@@ -8,6 +8,7 @@ export default class Map extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     const center = this.props.selected ? [this.props.selected.place.lat, this.props.selected.place.lng] : [45.5017, -73.5673];
     return (
