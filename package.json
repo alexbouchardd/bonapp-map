@@ -10,7 +10,7 @@
     "start": "node ./src/server",
     "watch": "concurrently -k -r \"babel-watch src/server/index.js\" \"npm run build -- --watch\"",
     "build": "webpack",
-    "postinstall": "webpack -p --config ./webpack.prod.config.js --progress"
+    "postinstall": "webpack -p --config ./webpack.config.js --progress"
   },
   "repository": {
     "type": "git",
