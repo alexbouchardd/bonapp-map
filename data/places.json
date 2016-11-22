@@ -18,5 +18,10 @@
         "lat": 45.497273,
         "lng": -73.579024,
         "google_places_id": "ChIJJwyxh2oayUwRceF1rWtAQOs"
+    },
+    "templibre": {
+        "lat": 45.528243,
+        "lng": -73.598002,
+        "google_places_id": "ChIJFzmnZ3sZyUwRKwqYW7OakaQ"
     }
 }

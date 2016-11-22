@@ -52,9 +52,24 @@ export default class ListView extends Component {
     const selectedClass = this.props.selected && (this.props.selected.id === droppoint.id) ? 'selectedItem ' : "";
     return(
       <div key={droppoint.id} className={selectedClass + "listItem"} onClick={() => this.props.onItemClick(droppoint)}>
-        <a href={droppoint.link} target="_blank">{droppoint[this.context.translator.lang].name}</a>
-        <p className="details">{droppoint[this.context.translator.lang].address_short}</p>
-        <p>{droppoint[this.context.translator.lang].description}</p>
+        <div className="listItemInfo">
+          <h3 href={droppoint.link} target="_blank">{droppoint[this.context.translator.lang].name}</h3>
+          <p className="details">{droppoint[this.context.translator.lang].address_short}</p>
+          <p>{droppoint[this.context.translator.lang].description}</p>
+        </div>
+        {this._renderItemFooter(droppoint)}
+      </div>
+    );
+  }
+
+  _renderItemFooter(droppoint){
+    if(!this.props.selected || !(this.props.selected.id === droppoint.id)){
+      return null;
+    }
+    return (
+      <div>
+        <a href={`https://www.google.ca/maps/place/${droppoint[this.context.translator.lang].address}`} target="_blank">Directions</a>
+        <a href={droppoint.link} target="_blank">Website</a>
       </div>
     );
   }

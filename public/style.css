@@ -41,9 +41,24 @@ body {
   top:30px
 }
 
+.nav .lang {
+  display: inline-block;
+  margin-left: 25px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.nav .lang a {
+  margin-right: 15px;
+}
+
+.langSelected {
+  font-weight: 700;
+}
+
 .logo {
   width:144px;
-  background-color: #f9f9f9;
+  display: inline-block;
 }
 
 .listContainer{
@@ -59,15 +74,15 @@ body {
 }
 
 .listInfo {
-  margin-top: 75px;
+  margin-top: 65px;
   padding:30px;
 }
 
 .listView {
   overflow-y: auto;
   position: absolute;
-  top: 200px;
-  bottom: 83px;
+  top: 190px;
+  bottom: 85px;
   height: auto;
 }
 
@@ -76,7 +91,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 25px 30px;
+  padding: 15px 30px;
   background-color: #f9f9f9;
   border-top: 1px solid #D0D0D0;
   z-index: 15;
@@ -113,12 +128,21 @@ body {
   border-right: solid 12px rgba(242, 153, 74, 1.0);
 }
 
-.listItem a {
+.listItem h3 {
   font-size: 18px;
   font-weight: 500;
   margin: 4px 0;
   text-transform: uppercase;
   color:inherit;
+}
+
+.listItem a {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 12px;
+  margin-right: 12px;
+  color: rgba(0,0,0,0.70);
+  display: inline-block;
 }
 
 .listItem a:hover {

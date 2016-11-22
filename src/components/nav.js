@@ -27,7 +27,7 @@ const svg = (
   </svg>
 );
 
-export default class Home extends Component {
+export default class Nav extends Component {
   constructor(props) {
     super(props);
   }
@@ -35,7 +35,15 @@ export default class Home extends Component {
     return (
       <div className='nav'>
         <div className='logo'>{svg}</div>
+        <div className='lang'>
+          <a href={"/en"} className={this.context.translator.lang == "en" ? "langSelected" : null}>EN</a>
+          <a href={"/fr"} className={this.context.translator.lang == "fr" ? "langSelected" : null}>FR</a>
+        </div>
       </div>
     );
   }
+}
+
+Nav.contextTypes = {
+  translator: PropTypes.object.isRequired
 }

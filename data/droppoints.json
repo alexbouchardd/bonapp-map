@@ -84,5 +84,26 @@
             "address": "1455 De Maisonneuve Blvd. W. H-290, Montreal, Quebec, Canada, H3G 1M8",
             "address_short": "1455 De Maisonneuve Blvd. W. H-290"
         }
+    },
+    {
+        "id": 5,
+        "type_id": "full",
+        "place_id": "templibre",
+        "link": "http://tempslibre.coop/espacepublic",
+        "open_date": null,
+        "picture_url": null,
+        "logo_url": null,
+        "en": {
+            "name": "Temps Libre Mile End",
+            "description": "Temps libre is a non-commercial free public space open to everyone. Free coffee, wifi, (and sometimes popcorn) are offered!",
+            "address": "5605 de Gaspé avenue, suite 106 Montreal, QC, H2T 2A4",
+            "address_short": "5605 de Gaspé avenue, suite 106"
+        },
+        "fr": {
+            "name": "Temps Libre Mile End",
+            "description": "Temps libre est un espace public gratuit ouvert à tous et non-commercial. Le café, le wifi, et parfois, le popcorn, y sont offerts!",
+            "address": " 5605 avenue de Gaspé, suite 106 Montréal, QC, H2T 2A4",
+            "address_short": "5605 avenue de Gaspé, suite 106"
+        }
     }
 ]
