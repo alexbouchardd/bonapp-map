@@ -29,7 +29,7 @@ var config = {
             loader: 'babel',
 
             query: {
-              presets: ['es2015', 'react']
+              presets: ['react', 'es2015']
             }
          }
       ]

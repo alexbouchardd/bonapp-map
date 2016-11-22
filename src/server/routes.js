@@ -3,8 +3,8 @@ import ReactDOMServer from 'react-dom/server';
 
 import Translator from '../services/translator'
 
-import places from 'json!../../data/places';
-import droppoints from 'json!../../data/droppoints';
+import places from '../../data/places';
+import droppoints from '../../data/droppoints';
 
 import Home from '../components/home';
 
