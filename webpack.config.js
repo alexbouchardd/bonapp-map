@@ -11,10 +11,17 @@ var config = {
 
    output: {
       path:'./public',
-      filename: 'app.js',
+      filename: 'bundle.js',
    },
 
    module: {
+     preLoaders: [
+        {
+          test: /\.json$/,
+          exclude: /node_modules/,
+          loader: 'json-loader'
+        },
+      ],
       loaders: [
          {
             test: /\.js$/,

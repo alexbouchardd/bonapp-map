@@ -24,6 +24,7 @@ export default class Home extends Component {
       });
 
     }
+    amplitude.getInstance().logEvent('test');
   }
 
   render() {
