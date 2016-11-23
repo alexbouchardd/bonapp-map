@@ -58,7 +58,7 @@ export default class Home extends Component {
 
   _handleItemClick(droppoint) {
     amplitude.getInstance().logEvent('selected_droppoint', {
-      'droppoint_id': droppoint.id
+      'droppoint_id': droppoint.id,
       'droppoint_place': droppoint.place_id
     });
     this.setState({selected: droppoint});
