@@ -18,6 +18,5 @@ function v(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype
 if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]};e.amplitude=n;
 })(window,document);
 amplitude.getInstance().init("ec4825627a055c8a6254046e100bd247");
-console.log(amplitude);
 
 ReactDOM.render(<App translator={translator} droppoints={window.props.droppoints}/>, document.getElementById('main'));
