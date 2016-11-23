@@ -17,14 +17,18 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
+    amplitude.getInstance().logEvent('home_pageview', {
+      'lang': this.props.translator.lang
+    });
     if ("geolocation" in navigator) {
+      amplitude.getInstance().logEvent('shown_location_request');
       navigator.geolocation.getCurrentPosition(position => {
+        amplitude.getInstance().logEvent('accepted_location_request');
         this.setState({user_position: {lat:position.coords.latitude, lng: position.coords.longitude}});
         this._watchPositon();
       });
 
     }
-    amplitude.getInstance().logEvent('test');
   }
 
   render() {
@@ -47,11 +51,16 @@ export default class Home extends Component {
 
   _watchPositon() {
     const watchID = navigator.geolocation.watchPosition(position => {
+      amplitude.getInstance().logEvent('changed_position');
       this.setState({user_position: {lat:position.coords.latitude, lng: position.coords.longitude}})
     });
   }
 
   _handleItemClick(droppoint) {
+    amplitude.getInstance().logEvent('selected_droppoint', {
+      'droppoint_id': droppoint.id
+      'droppoint_place': droppoint.place_id
+    });
     this.setState({selected: droppoint});
   }
 }

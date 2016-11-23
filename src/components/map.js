@@ -46,6 +46,10 @@ export default class Map extends Component {
   }
 
   _handleMarkerClicked(droppoint) {
+    amplitude.getInstance().logEvent('clicked_droppoint_marker', {
+      'droppoint_id': droppoint.id
+      'droppoint_place': droppoint.place_id
+    });
     this.props.onItemClick(droppoint);
   }
 }
