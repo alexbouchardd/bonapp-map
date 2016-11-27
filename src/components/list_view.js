@@ -4,19 +4,19 @@ import Distance from "../lib/distance";
 
 const footerLinks = [
   {
-    translation_key: "!nav.network",
+    translation_key: "!nav.community",
     url: ""
   },{
-    translation_key: "!nav.about",
+    translation_key: "!nav.manifesto",
     url: ""
   },{
-    translation_key: "!nav.contact",
+    translation_key: "!nav.fridges",
     url: ""
   },{
-    translation_key: "!nav.receipes",
+    translation_key: "!nav.foodwaste",
     url: ""
   },{
-    translation_key: "!nav.blog",
+    translation_key: "!nav.recipes",
     url: ""
   }
 ]

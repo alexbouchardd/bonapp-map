@@ -1,9 +1,9 @@
 {
-  "!nav.about" : "About us",
-  "!nav.network" : "Network",
-  "!nav.contact" : "Contact us",
-  "!nav.blog" : "Blog",
-  "!nav.receipes" : "Receipes",
+  "!nav.community" : "Community",
+  "!nav.fridges" : "Fridges",
+  "!nav.manifesto" : "Manifesto",
+  "!nav.foodwaste" : "Food waste",
+  "!nav.recipes" : "Recipes",
   "!list.title": "Droppoints",
   "!list.description": "Deposit or take food at these locations.",
   "!list.how": "How does it work?"

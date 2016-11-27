@@ -12,11 +12,7 @@ export default class Map extends Component {
   render() {
     const center = this.props.selected ? [this.props.selected.place.lat, this.props.selected.place.lng] : [45.5017, -73.5673];
     return (
-      <div id='mapContainer' onClick={() => {
-          if(this.props.drawer_is_visible) {
-            this.props.toggleDrawer();
-          }
-        }}>
+      <div id='mapContainer'>
          <GoogleMap
           bootstrapURLKeys={{
             key: 'AIzaSyCPMq-OZb3CNvLyibyJAyWnikjyFQWvN8w',

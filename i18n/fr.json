@@ -1,9 +1,9 @@
 {
-  "!nav.about" : "À propos",
-  "!nav.network" : "Réseau",
-  "!nav.contact" : "Contact",
-  "!nav.blog" : "Blogue",
-  "!nav.receipes" : "Recettes",
+  "!nav.community" : "Communauté",
+  "!nav.fridges" : "Frigos",
+  "!nav.manifesto" : "Manifesto",
+  "!nav.foodwaste" : "Gaspillage",
+  "!nav.recipes" : "Recettes",
   "!list.title": "Point d'échange",
   "!list.description": "Déposez ou prenez de la nourriture à ces endroits",
   "!list.how": "Comment ça marche?"
