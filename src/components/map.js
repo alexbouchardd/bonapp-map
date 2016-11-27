@@ -20,10 +20,14 @@ export default class Map extends Component {
          <GoogleMap
           bootstrapURLKeys={{
             key: 'AIzaSyCPMq-OZb3CNvLyibyJAyWnikjyFQWvN8w',
-            language: 'en'
+            language: 'en',
+          }}
+          options={{
+            fullscreenControl: false
           }}
           center={center}
-          defaultZoom={12}>
+          defaultZoom={12}
+          >
           {this.props.droppoints.map((droppoint, index) =>
             <Marker
               key={index}
@@ -54,9 +58,6 @@ export default class Map extends Component {
       'droppoint_id': droppoint.id,
       'droppoint_place': droppoint.place_id
     });
-    if(!this.props.drawer_is_visible) {
-      this.props.toggleDrawer();
-    }
     this.props.onItemClick(droppoint);
   }
 }

@@ -168,6 +168,13 @@ body {
   border-right: solid 12px rgba(242, 153, 74, 0.5);
 }
 
+@media (max-width: 500px) {
+  .listItem:hover {
+    padding-right: initial;
+    border-right: initial;
+  }
+}
+
 .selectedItem:hover {
   padding-right:18px;
   border-right: solid 12px rgba(242, 153, 74, 1.0);
