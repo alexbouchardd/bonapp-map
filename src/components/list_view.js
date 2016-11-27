@@ -30,11 +30,11 @@ export default class ListView extends Component {
   render() {
     return (
       <div className="listContainer">
-        <div className="listInfo">
-          <h1>{this.context.translator.t("!list.title")}</h1>
-          <a>{this.context.translator.t("!list.description")}</a>
-        </div>
         <div className="listView">
+          <div className="listInfo">
+            <h1>{this.context.translator.t("!list.title")}</h1>
+            <a>{this.context.translator.t("!list.description")}</a>
+          </div>
           {this.props.droppoints.map((droppoint, index) => {
             // if(this.props.user_position){
             //   console.log(Distance(droppoint.place.lat, droppoint.place.long, this.props.user_position.lat, this.props.user_position.lng, "K"));

@@ -120,14 +120,13 @@ body {
 
 
 .listInfo {
-  margin-top: 65px;
   padding:30px;
 }
 
 .listView {
   overflow-y: auto;
   position: absolute;
-  top: 190px;
+  top: 85px;
   bottom: 85px;
   height: auto;
 }
