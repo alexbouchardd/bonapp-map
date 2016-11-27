@@ -27,17 +27,35 @@ const svg = (
   </svg>
 );
 
+const menu_svg = (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+  </svg>
+);
+
+const map_svg = (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+    <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+  </svg>
+);
+
 export default class Nav extends Component {
   constructor(props) {
     super(props);
   }
   render() {
+    const nav_svg = this.props.drawer_is_visible ? map_svg : menu_svg;
     return (
       <div className='nav'>
         <div className='logo'>{svg}</div>
         <div className='lang'>
           <a href={"/en"} className={this.context.translator.lang == "en" ? "langSelected" : null}>EN</a>
           <a href={"/fr"} className={this.context.translator.lang == "fr" ? "langSelected" : null}>FR</a>
+        </div>
+        <div className='burger' onClick={this.props.toggleDrawer}>
+          {nav_svg}
         </div>
       </div>
     );

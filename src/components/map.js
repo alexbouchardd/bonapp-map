@@ -12,7 +12,11 @@ export default class Map extends Component {
   render() {
     const center = this.props.selected ? [this.props.selected.place.lat, this.props.selected.place.lng] : [45.5017, -73.5673];
     return (
-      <div id='mapContainer'>
+      <div id='mapContainer' onClick={() => {
+          if(this.props.drawer_is_visible) {
+            this.props.toggleDrawer();
+          }
+        }}>
          <GoogleMap
           bootstrapURLKeys={{
             key: 'AIzaSyCPMq-OZb3CNvLyibyJAyWnikjyFQWvN8w',
@@ -50,6 +54,9 @@ export default class Map extends Component {
       'droppoint_id': droppoint.id,
       'droppoint_place': droppoint.place_id
     });
+    if(!this.props.drawer_is_visible) {
+      this.props.toggleDrawer();
+    }
     this.props.onItemClick(droppoint);
   }
 }

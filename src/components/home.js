@@ -8,7 +8,8 @@ export default class Home extends Component {
     super(props);
     this.state = {
       selected: null,
-      user_position: null
+      user_position: null,
+      drawer_is_visible: true
     };
   }
 
@@ -21,10 +22,16 @@ export default class Home extends Component {
       'lang': this.props.translator.lang
     });
     if ("geolocation" in navigator) {
-      amplitude.getInstance().logEvent('shown_location_request');
+      amplitude.getInstance().logEvent('location_available');
       navigator.geolocation.getCurrentPosition(position => {
-        amplitude.getInstance().logEvent('accepted_location_request');
         this.setState({user_position: {lat:position.coords.latitude, lng: position.coords.longitude}});
+
+        // All tracking is concurrently anonymous, BonApp will not track position of identified data without consentment.
+        amplitude.getInstance().logEvent('accepted_location_request', {
+          'lat': position.coords.latitude,
+          'lng': position.coords.longitude
+        });
+
         this._watchPositon();
       });
 
@@ -32,15 +39,22 @@ export default class Home extends Component {
   }
 
   render() {
+    const drawer_state = this.state.drawer_is_visible ? "drawer-open" : "drawer-close";
     return (
       <div>
-        <Nav/>
-        <ListView
-          droppoints={this.props.droppoints}
-          onItemClick={this._handleItemClick.bind(this)}
-          selected={this.state.selected}
-          user_position={this.state.user_position}/>
+        <div className={"drawer " + drawer_state}>
+          <Nav
+            toggleDrawer={this._toggleDrawer.bind(this)}
+            drawer_is_visible={this.state.drawer_is_visible}/>
+          <ListView
+            droppoints={this.props.droppoints}
+            onItemClick={this._handleItemClick.bind(this)}
+            selected={this.state.selected}
+            user_position={this.state.user_position}/>
+        </div>
         <Map
+          toggleDrawer={this._toggleDrawer.bind(this)}
+          drawer_is_visible={this.state.drawer_is_visible}
           droppoints={this.props.droppoints}
           onItemClick={this._handleItemClick.bind(this)}
           selected={this.state.selected}
@@ -51,9 +65,17 @@ export default class Home extends Component {
 
   _watchPositon() {
     const watchID = navigator.geolocation.watchPosition(position => {
-      amplitude.getInstance().logEvent('changed_position');
+      // All tracking is concurrently anonymous, BonApp will not track position of identified data without consentment.
+      amplitude.getInstance().logEvent('changed_position', {
+        'lat': position.coords.latitude,
+        'lng': position.coords.longitude
+      });
       this.setState({user_position: {lat:position.coords.latitude, lng: position.coords.longitude}})
     });
+  }
+
+  _toggleDrawer() {
+    this.setState({drawer_is_visible: !this.state.drawer_is_visible});
   }
 
   _handleItemClick(droppoint) {

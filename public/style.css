@@ -27,11 +27,36 @@ a {
 
 body {
   height: 100vh;
+  overflow: hidden;
 }
 
 #mapContainer {
   margin-left: 325px;
   height: 100vh;
+}
+
+@media (max-width: 700px) {
+  #mapContainer {
+    margin-left: 0;
+  }
+}
+
+.drawer {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.drawer-open {
+  margin-left: 0px;
+}
+
+.drawer-close {
+  margin-left: -330px;
+}
+
+@media (max-width: 500px) {
+  .drawer-close  {
+    margin-left: -500px;
+  }
 }
 
 .nav {
@@ -50,6 +75,19 @@ body {
 
 .nav .lang a {
   margin-right: 15px;
+}
+
+.nav .burger {
+  position: fixed;
+  right:30px;
+  top:40px;
+  display:none;
+}
+
+@media (max-width: 700px) {
+  .nav .burger {
+    display: block;
+  }
 }
 
 .langSelected {
@@ -72,6 +110,14 @@ body {
   position: relative;
   box-shadow: 0 2px 15px rgba(0,0,0,0.24);
 }
+
+@media (max-width: 500px) {
+  .listContainer {
+    width: 500px;
+    max-width: 100%;
+  }
+}
+
 
 .listInfo {
   margin-top: 65px;
