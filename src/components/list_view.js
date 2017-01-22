@@ -33,7 +33,8 @@ export default class ListView extends Component {
         <div className="listView">
           <div className="listInfo">
             <h1>{this.context.translator.t("!list.title")}</h1>
-            <a>{this.context.translator.t("!list.description")}</a>
+            <p>{this.context.translator.t("!list.description")}</p>
+            <a href="https://bonapp.ca" target="_blank">{this.context.translator.t("!list.link")}</a>
           </div>
           {this.props.droppoints.map((droppoint, index) => {
             // if(this.props.user_position){
@@ -43,7 +44,6 @@ export default class ListView extends Component {
           }
           )}
         </div>
-        {this._renderFooter()}
       </div>
     );
   }
@@ -74,17 +74,6 @@ export default class ListView extends Component {
     );
   }
 
-  _renderFooter() {
-    return(
-      <div className="footer">
-        {footerLinks.map((link, index) => {
-          return (
-            <a href={link.url} key={index}>{this.context.translator.t(link.translation_key)}</a>
-          );
-        })}
-      </div>
-    )
-  }
 }
 
 ListView.contextTypes = {

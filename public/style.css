@@ -123,11 +123,15 @@ body {
   padding:30px;
 }
 
+.listInfo a {
+  color:  rgba(242, 153, 74, 1);
+}
+
 .listView {
   overflow-y: auto;
   position: absolute;
   top: 85px;
-  bottom: 85px;
+  bottom: 0px;
   height: auto;
 }
 
