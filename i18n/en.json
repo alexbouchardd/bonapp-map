@@ -4,8 +4,8 @@
   "!nav.manifesto" : "Manifesto",
   "!nav.foodwaste" : "Food waste",
   "!nav.recipes" : "Recipes",
-  "!list.title": "Droppoints",
-  "!list.description": "Deposit or take food at these locations.",
+  "!list.title": "Fridge network",
+  "!list.description": "Give or take free food at these locations.",
   "!list.link": "Discover BonApp",
   "!list.how": "How does it work?"
 }
