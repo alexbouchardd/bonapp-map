@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import Translator from '../services/translator';
 import App from '../components/home';
 
-const translator = new Translator(window.props.translator);
-
 (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script");r.type="text/javascript";
 r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.0.1-min.gz.js";
 r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
@@ -19,4 +17,5 @@ if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]};e.amp
 })(window,document);
 amplitude.getInstance().init("ec4825627a055c8a6254046e100bd247");
 
+const translator = new Translator(window.props.translator);
 ReactDOM.render(<App translator={translator} droppoints={window.props.droppoints}/>, document.getElementById('main'));

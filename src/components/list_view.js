@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 
-import Distance from "../lib/distance";
+import Distance from "../utils/distance";
 
 const footerLinks = [
   {
