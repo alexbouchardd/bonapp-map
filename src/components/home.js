@@ -3,6 +3,15 @@ import Map from './map';
 import ListView from './list_view';
 import Nav from './nav';
 
+const childContextTypes = {
+  translator: PropTypes.object.isRequired
+}
+
+const propTypes = {
+  droppoints: PropTypes.array.isRequired,
+  translator: PropTypes.object.isRequired
+}
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -34,7 +43,6 @@ export default class Home extends Component {
 
         this._watchPositon();
       });
-
     }
   }
 
@@ -87,11 +95,5 @@ export default class Home extends Component {
   }
 }
 
-Home.propTypes = {
-  droppoints: PropTypes.array.isRequired,
-  translator: PropTypes.object.isRequired
-}
-
-Home.childContextTypes = {
-  translator: PropTypes.object.isRequired
-}
+Home.propTypes = propTypes;
+Home.childContextTypes = childContextTypes;

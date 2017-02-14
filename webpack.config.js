@@ -9,33 +9,34 @@ new webpack.DefinePlugin({
 new webpack.optimize.UglifyJsPlugin()
 
 var config = {
-   entry: './src/client',
+  entry: './src/client',
 
-   output: {
-      path:'./public',
-      filename: 'bundle.js',
-   },
+  output: {
+    path:'./public',
+    filename: 'bundle.js',
+  },
 
-   module: {
-     preLoaders: [
-        {
-          test: /\.json$/,
-          exclude: /node_modules/,
-          loader: 'json-loader'
-        },
-      ],
-      loaders: [
-         {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel',
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          presets: ['react', 'es2015']
+        }
+      },
+      {
+         test: /\.json$/,
+         exclude: /node_modules/,
+         loader: 'json'
+      }
+    ]
+  },
 
-            query: {
-              presets: ['react', 'es2015']
-            }
-         }
-      ]
-   }
+  resolve: {
+    extensions: ['', '.js', '.json']
+  }
 }
 
 module.exports = config;

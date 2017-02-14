@@ -41,6 +41,10 @@ const map_svg = (
   </svg>
 );
 
+const contextTypes = {
+  translator: PropTypes.object.isRequired
+}
+
 export default class Nav extends Component {
   constructor(props) {
     super(props);
@@ -62,6 +66,4 @@ export default class Nav extends Component {
   }
 }
 
-Nav.contextTypes = {
-  translator: PropTypes.object.isRequired
-}
+Nav.contextTypes = contextTypes;

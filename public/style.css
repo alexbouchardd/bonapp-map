@@ -25,6 +25,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   height: 100vh;
   overflow: hidden;
@@ -118,7 +122,6 @@ body {
   }
 }
 
-
 .listInfo {
   padding:30px;
 }
@@ -133,6 +136,11 @@ body {
   top: 85px;
   bottom: 0px;
   height: auto;
+  padding-bottom: 20px;
+}
+
+.listView::-webkit-scrollbar { 
+    display: none;
 }
 
 .footer {
@@ -174,8 +182,7 @@ body {
 
 @media (max-width: 500px) {
   .listItem:hover {
-    padding-right: initial;
-    border-right: initial;
+    border-right: solid 12px transparent;
   }
 }
 
@@ -197,12 +204,8 @@ body {
   font-weight: 500;
   margin-top: 12px;
   margin-right: 12px;
-  color: rgba(0,0,0,0.70);
+  color: rgba(242, 153, 74, 1);
   display: inline-block;
-}
-
-.listItem a:hover {
-  color:  rgba(242, 153, 74, 1);
 }
 
 .listItem p {
