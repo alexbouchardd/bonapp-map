@@ -53,7 +53,7 @@ export default class Nav extends Component {
     const nav_svg = this.props.drawer_is_visible ? map_svg : menu_svg;
     return (
       <div className='nav'>
-        <div className='logo'>{svg}</div>
+        <a href="https://bonapp.ca" target="_blank"><div className='logo'>{svg}</div></a>
         <div className='lang'>
           <a href={"/en"} className={this.context.translator.lang == "en" ? "langSelected" : null}>EN</a>
           <a href={"/fr"} className={this.context.translator.lang == "fr" ? "langSelected" : null}>FR</a>
