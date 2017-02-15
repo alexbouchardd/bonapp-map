@@ -51,5 +51,5 @@ function renderHome(req) {
   };
 
   const markup = ReactDOMServer.renderToString(<Home translator={context.translator} droppoints={props.droppoints}/>);
-  return { props: props, html: markup };
+  return { props: props, html: markup, title: context.translator.t("!seo.title"), description: context.translator.t("!seo.description") };
 }

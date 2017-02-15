@@ -11,12 +11,12 @@
     <link rel="shortcut icon" href="public/images/favicons/favicon.ico">
     <meta name="msapplication-config" content="public/images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <title><%- props.translator.t("!seo.title") -%></title>
-    <meta name="description" content=<%- props.translator.t("!seo.description") -%>/>
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>"/>
 
     <meta property="og:url" content="http://map.bonapp.ca" />
-    <meta property="og:title" content=<%- props.translator.t("!seo.description") -%> />
-    <meta property="og:description" content=<%- props.translator.t("!seo.description") -%> />
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:description" content="<%= description %>" />
     <meta property="og:image" content="http://map.bonapp.ca/public/images/map_facebook_share.png" />
 
     <link rel="stylesheet" href="/public/style.css">
