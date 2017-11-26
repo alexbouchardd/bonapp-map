@@ -1,4 +1,6 @@
-import React, {PropTypes, Component} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Map from './map';
 import ListView from './list_view';
 import Nav from './nav';

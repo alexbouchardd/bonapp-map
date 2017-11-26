@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const svg = (
   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -55,8 +56,8 @@ export default class Nav extends Component {
       <div className='nav'>
         <a href="https://bonapp.ca" target="_blank"><div className='logo'>{svg}</div></a>
         <div className='lang'>
-          <a href={"/en"} className={this.context.translator.lang == "en" ? "langSelected" : null}>EN</a>
-          <a href={"/fr"} className={this.context.translator.lang == "fr" ? "langSelected" : null}>FR</a>
+          <a href={"en"} className={this.context.translator.lang == "en" ? "langSelected" : null}>EN</a>
+          <a href={"fr"} className={this.context.translator.lang == "fr" ? "langSelected" : null}>FR</a>
         </div>
         <div className='burger' onClick={this.props.toggleDrawer}>
           {nav_svg}

@@ -1,23 +1,23 @@
 {
   "name": "bonapp",
   "version": "1.0.0",
-  "description": "Bonapp network platform",
+  "description": "Bonapp network map",
   "main": "app.js",
   "engines": {
-    "node": "6.6.0"
+    "node": "8.9.1"
   },
   "scripts": {
-    "start": "./node_modules/.bin/babel-node ./src/server",
-    "watch": "concurrently -k -r \"babel-watch src/server/index.js\" \"npm run build -- --watch\"",
-    "build": "webpack",
+    "dev:start": "./node_modules/.bin/babel-node ./src/server",
+    "dev:watch": "concurrently -k -r \"babel-watch src/server/index.js\" \"npm run build -- --watch\"",
+    "dev:build": "webpack",
+    "build": "./node_modules/.bin/babel-node scripts/build-files | NODE_ENV=production npm run postinstall",
     "postinstall": "webpack -p --config ./webpack.config.js --progress"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexbouchardd/bonapp.git"
   },
-  "author": "Bonapp",
-  "license": "ISC",
+  "author": "Alexandre Bouchard",
   "bugs": {
     "url": "https://github.com/alexbouchardd/bonapp/issues"
   },
@@ -29,18 +29,19 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.17.0",
-    "babelify": "^7.3.0",
     "body-parser": "^1.15.2",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
-    "google-map-react": "^0.21.3",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-pure-render": "^1.0.2",
-    "json-loader": "^0.5.4",
-    "webpack": "^1.13.2"
+    "google-map-react": "^0.25.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-pure-render": "^1.0.2"
   },
   "devDependencies": {
+    "json-loader": "^0.5.4",
+    "webpack": "^3.8.1",
+    "extract-text-webpack-plugin": "^3.0.1",
     "babel-watch": "^2.0.3",
     "concurrently": "^3.1.0"
   }
