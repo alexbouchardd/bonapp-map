@@ -9,7 +9,7 @@ import places from '../data/places';
 import droppoints from '../data/droppoints';
 import Home from '../src/components/home';
 
-const langs = ['en', 'fr'];
+const langs = ['fr', 'en'];
 
 const file = fs.readFileSync(path.join(process.cwd(), '/views/index.ejs'), 'ascii');
 
