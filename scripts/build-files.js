@@ -45,8 +45,10 @@ langs.forEach((lang, index) => {
   });
 
   if (index === 0) {
-    fs.writeFileSync(path.join(process.cwd(), `/docs/index.html`), html)
+    fs.writeFileSync(path.join(process.cwd(), `/docs/index.html`), html);
   }
 
-  fs.writeFileSync(path.join(process.cwd(), `/docs/${lang}.html`), html)
+  fs.writeFileSync(path.join(process.cwd(), `/docs/${lang}.html`), html);
+
+  console.log("Templates saved");
 })
