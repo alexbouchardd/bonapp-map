@@ -7,7 +7,7 @@
     "node": "8.9.1"
   },
   "scripts": {
-    "dev:watch": "concurrently -k -r \"babel-watch src/server/index.js\" \"npm run build -- --watch\"",
+    "dev:watch": "concurrently -k -r \"babel-watch src/server/index.js\" \"webpack --watch\"",
     "build": "concurrently \"./node_modules/.bin/babel-node scripts/build-files\" \"NODE_ENV=production npm run postinstall\"",
     "postinstall": "webpack -p --config ./webpack.config.js --progress"
   },

@@ -57,7 +57,7 @@ body {
   margin-left: -330px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .drawer-close  {
     margin-left: -500px;
   }
@@ -109,13 +109,13 @@ body {
   z-index: 10;
   overflow: hidden;
   background-color: #f9f9f9;
-  width: 325px;
+  width: 38.2%;
   float: left;
   position: relative;
   box-shadow: 0 2px 15px rgba(0,0,0,0.24);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .listContainer {
     width: 500px;
     max-width: 100%;
@@ -180,7 +180,7 @@ body {
   border-right: solid 12px rgba(242, 153, 74, 0.5);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .listItem:hover {
     border-right: solid 12px transparent;
   }
